@@ -43,7 +43,7 @@ class JuliaBox:
         photo_dir = "theta"  # Directory containing the photos
         photo_filenames = os.listdir(photo_dir)  # List all files in the directory
         photo_filenames = [f for f in photo_filenames if f.endswith(".JPG")]  # Filter for JPG files
-        random.shuffle(photox_filenames)  # Shuffle the list to select a random photo
+        random.shuffle(photo_filenames)  # Shuffle the list to select a random photo
         self.photo = Image.open(
             os.path.join(photo_dir, photo_filenames[0]))  # Load the first photo from the shuffled list
         width, height = self.photo.size  # Get the original size of the image
