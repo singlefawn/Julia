@@ -14,29 +14,32 @@ from PIL import Image, ImageTk
 class JuliaBox:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("Jim AI")
+        self.root.title("Julia AI")
         self.root.geometry("1600x900")
-        self.root.configure(bg="black")  # Set background color to black
+        self.root.configure(bg="black")
 
-        self.load_random_photo()  # Load and display a random photo
+        self.load_random_photo()
 
-        # Set the font for the Entry widget to Century Gothic
-        self.entry_font = ("Century Gothic", 12)  # Specify font name and size
+        self.entry_font = ("Century Gothic", 12)
         self.input_box = tk.Entry(self.root, font=self.entry_font)
-        self.input_box.pack(pady=10)  # Use pack for the Entry widget
-        self.input_box.config(width=50)  # Set width of text box to 50 characters
+        self.input_box.pack(pady=10)
+        self.input_box.config(width=50)
 
-        self.submit_button = tk.Button(self.root, text="Submit", command=self.julia_box)
-        self.submit_button.pack(pady=10)  # Use pack for the Button widget
+        # Load the custom PNG image for the send button from the specified path
+        send_button_image = Image.open("admin/assets/send.png")
+        send_button_image = send_button_image.resize((240, 86))
+        self.send_button_image = ImageTk.PhotoImage(send_button_image)
 
-        # Bind the return key (Enter key) to the julia_box function
+        # Create the submit button using the custom image with 0 px border
+        self.submit_button = tk.Label(self.root, image=self.send_button_image, borderwidth=0)
+        self.submit_button.pack(pady=10)
+        self.submit_button.bind('<Button-1>', lambda event: self.julia_box())
+
         self.input_box.bind('<Return>', lambda event: self.julia_box())
 
         self.load_logo()
 
-
         self.root.mainloop()
-
 
     def load_random_photo(self):
         # Function to load and display a random photo from the "foundation" directory
@@ -100,7 +103,7 @@ class JuliaBox:
         message = (gen, admin, input_message)
 
         # Create a JSON file path with the generated number
-        json_file = os.path.join("memory", f"{gen}_jim.json")
+        json_file = os.path.join("memory", f"{gen}_Julia.json")
 
         # Write the message tuple to the JSON file
         with open(json_file, 'w') as f:
