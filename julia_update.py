@@ -21,7 +21,9 @@ class JuliaBox:
         self.text_frame = tk.Frame(self.root, bg="black")
         self.text_frame.pack(pady=(15, 10))
 
-        self.entry_font = ("Century Gothic", 14)
+        custom_font_path = "fonts/CenturyGothic.ttf"  # Relative path to your custom font
+        self.entry_font = (custom_font_path, 14)  # Custom font and size
+
         self.text_box = tk.Text(self.text_frame, wrap=tk.WORD, font=self.entry_font, width=50, height=6,
                                 bg="black", fg="white", insertbackground="white", borderwidth=0,
                                 highlightthickness=0)
