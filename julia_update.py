@@ -1,4 +1,5 @@
-# julia-ai.py
+# Julia is more than just a journaling application; it's a personalized assistant designed to be an integral part of the Spider Deer Library system. Set within the innovative and expansive environment of the orbital habitat orbiting planet Anera, Julia serves as a companion, archivist, and helper.
+# This module only enables inputs
 
 import json
 import tkinter as tk
@@ -21,7 +22,7 @@ class JuliaBox:
         self.text_frame = tk.Frame(self.root, bg="black")
         self.text_frame.pack(pady=(15, 10))
 
-        custom_font_path = "fonts/CenturyGothic.ttf"  # Relative path to your custom font
+        custom_font_path = "admin/assets/century-gothic/CenturyGothic.ttf"  # Relative path to your custom font
         self.entry_font = (custom_font_path, 14)  # Custom font and size
 
         self.text_box = tk.Text(self.text_frame, wrap=tk.WORD, font=self.entry_font, width=50, height=6,
