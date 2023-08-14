@@ -22,7 +22,7 @@ class JuliaBox:
         self.text_frame = tk.Frame(self.root, bg="black")
         self.text_frame.pack(pady=(15, 10))
 
-        custom_font_path = "admin/assets/century-gothic/CenturyGothic.ttf"  # Relative path to your custom font
+        custom_font_path = "../../assets/century-gothic/CenturyGothic.ttf"  # Relative path to your custom font
         self.entry_font = (custom_font_path, 14)  # Custom font and size
 
         self.text_box = tk.Text(self.text_frame, wrap=tk.WORD, font=self.entry_font, width=50, height=6,
@@ -32,7 +32,7 @@ class JuliaBox:
 
         # Custom scrollbar
         self.scrollbar = tk.Canvas(self.text_frame, bg="black", width=63, height=86, highlightthickness=0)
-        scroll_orb_image = Image.open("admin/assets/scroll_orb.png")
+        scroll_orb_image = Image.open("../../assets/scroll_orb.png")
         scroll_orb_image = scroll_orb_image.resize((33, 43))
         self.scroll_orb_image = ImageTk.PhotoImage(scroll_orb_image)
         self.slider = self.scrollbar.create_image(31, 43, image=self.scroll_orb_image)
@@ -40,7 +40,7 @@ class JuliaBox:
         self.scrollbar.bind("<B1-Motion>", self.on_scroll)
         self.text_box.bind("<MouseWheel>", self.on_mouse_wheel)
 
-        send_button_image = Image.open("admin/assets/send.png")
+        send_button_image = Image.open("../../assets/send.png")
         send_button_image = send_button_image.resize((240, 86))
         self.send_button_image = ImageTk.PhotoImage(send_button_image)
 
@@ -67,7 +67,7 @@ class JuliaBox:
         self.scrollbar.coords(self.slider, 31, y)
 
     def load_random_photo(self):
-        photo_dir = "theta"  # Directory containing the photos
+        photo_dir = "../../../theta"  # Directory containing the photos
         photo_filenames = os.listdir(photo_dir)  # List all files in the directory
         photo_filenames = [f for f in photo_filenames if f.endswith(".JPG")]  # Filter for JPG files
         random.shuffle(photo_filenames)  # Shuffle the list to select a random photo
@@ -130,7 +130,7 @@ class JuliaBox:
         message = (gen, admin, input_message)
 
         # Create a JSON file path with the generated number
-        json_file = os.path.join("memory", f"{gen}_Julia.json")
+        json_file = os.path.join("../../../memory", f"{gen}_Julia.json")
 
         # Write the message tuple to the JSON file
         with open(json_file, 'w') as f:
@@ -146,8 +146,8 @@ class JuliaBox:
 
     def create_memory_directory(self):
         # Function to create a memory directory if not exists
-        if not os.path.exists("memory"):
-            os.makedirs("memory")
+        if not os.path.exists("../../../memory"):
+            os.makedirs("../../../memory")
 
     def ts_to_gen(self, ts):
         gen = math.pow(1.0002, (ts - 1675084800) / 3300)
