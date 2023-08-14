@@ -74,11 +74,10 @@ class JuliaBox:
 
     def load_random_photo(self):
         photo_dir = "theta"
-        photo_filenames = os.listdir(photo_dir)
-        photo_filenames = [f for f in photo_filenames if f.endswith(".JPG")]
+        photo_filenames = [f for f in os.listdir(photo_dir) if f.lower().endswith((".png", ".jpg", ".jpeg", ".gif"))]
         random.shuffle(photo_filenames)
-        self.photo = Image.open(os.path.join(photo_dir, photo_filenames[0]))
-        width, height = self.photo.size
+        photo = Image.open(os.path.join(photo_dir, photo_filenames[0]))
+        width, height = photo.size
         aspect_ratio = width / height
         target_aspect_ratio = 800 / 500
         if aspect_ratio > target_aspect_ratio:
@@ -87,19 +86,16 @@ class JuliaBox:
         else:
             new_height = 500
             new_width = int(new_height * aspect_ratio)
-        self.photo = self.photo.resize((new_width, new_height))
-        self.photo = ImageTk.PhotoImage(self.photo)
-        self.photo_label = tk.Label(self.root, image=self.photo, highlightthickness=0, borderwidth=0)
-        self.photo_label.pack(pady=(0, 15))
+        photo = photo.resize((new_width, new_height))
+        self.photo = ImageTk.PhotoImage(photo)
+        if hasattr(self, 'photo_label'):
+            self.photo_label.config(image=self.photo)  # Update the existing label
+        else:
+            self.photo_label = tk.Label(self.root, image=self.photo, highlightthickness=0, borderwidth=0)
+            self.photo_label.pack(pady=(0, 15))
 
     def load_new_random_photo(self):
-        self.photo_label.pack_forget()
-        self.text_frame.pack_forget()
-        self.submit_button.pack_forget()
         self.load_random_photo()
-        self.photo_label.pack(pady=(0, 15))
-        self.text_frame.pack(pady=(15, 10))
-        self.submit_button.pack(pady=10)
 
     def load_logo(self):
         logo = Image.open("logo.png")
