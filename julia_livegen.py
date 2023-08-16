@@ -1,3 +1,5 @@
+# this versions shows live gen after each entry with no toggle or settings to turn it off
+
 import json
 import tkinter as tk
 import os
@@ -8,14 +10,10 @@ from tkinter import Toplevel
 from PIL import Image, ImageTk
 import threading
 import subprocess
-from setup_julia import Setup
 
 
 class JuliaBox:
     def __init__(self):
-
-        self.setup = setup_instance  # Assign the passed setup instance
-
         self.root = tk.Tk()
         self.root.title("Julia AI")
         self.root.geometry("1600x900")
@@ -128,18 +126,16 @@ class JuliaBox:
         self.text_box.delete("1.0", tk.END)
         self.text_box.focus_set()
 
-        if self.setup.is_live_gen_enabled():  # Check if live gen is enabled in settings
-            # Start livegen.py in a separate thread
-            livegen_thread = threading.Thread(target=self.run_livegen)
-            livegen_thread.start()
+        # Start livegen.py in a separate thread
+        livegen_thread = threading.Thread(target=self.run_livegen)
+        livegen_thread.start()
 
         self.load_new_random_photo()
-
 
     def run_livegen(self):
         # Run livegen.py for 4 seconds
         livegen_process = subprocess.Popen(["python", "livegen.py"])
-        time.sleep(2.2)  # Run for 4 seconds
+        time.sleep(4)  # Run for 4 seconds
         livegen_process.terminate()  # Close the livegen process
     def toggle_floating_div(self, event):
         if self.floating_div:
@@ -194,8 +190,5 @@ class JuliaBox:
     def ts_to_gen(self, ts):
         gen = math.pow(1.0002, (ts - 1675084800) / 3300)
         return gen
-
-
-setup_instance = Setup()
 
 julia_box = JuliaBox()

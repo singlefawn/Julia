@@ -1,4 +1,4 @@
-refractor of julia to support PyQt5
+# refractor of julia to support PyQt5
 
 import os
 import random
@@ -81,7 +81,7 @@ class JuliaBox(QtWidgets.QWidget):
 
 
     def load_random_photo(self):
-        photo_dir = "theta"
+        photo_dir = "../../../theta"
         photo_filenames = [f for f in os.listdir(photo_dir) if f.lower().endswith((".png", ".jpg", ".jpeg", ".gif"))]
         random.shuffle(photo_filenames)
         photo_path = os.path.join(photo_dir, photo_filenames[0])
