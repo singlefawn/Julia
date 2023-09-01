@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="683f4e71-ffd1-4627-b628-93457bc13f3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/settings_editor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup_julia.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/julia-setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/julia_livegen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/julia.py" beforeDir="false" afterPath="$PROJECT_DIR$/julia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/julia_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/labs/Lab-A/julia_update_pyqt5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/livegen.py" beforeDir="false" afterPath="$PROJECT_DIR$/livegen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
