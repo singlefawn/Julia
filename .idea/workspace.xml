@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="683f4e71-ffd1-4627-b628-93457bc13f3a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AddressBookViewer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/address_book.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +48,28 @@
       <recent name="$PROJECT_DIR$/admin/labs/Lab-A" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_new_livegen">
+  <component name="RunManager" selected="Python.address_book">
+    <configuration name="address_book" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="julia-ai-journal" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/address_book.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="julia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="julia-ai-journal" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,27 +133,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="livegen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="julia-ai-journal" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/livegen.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="julia-ai-journal" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,7 +177,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_new_livegen" />
+        <item itemvalue="Python.address_book" />
         <item itemvalue="Python.julia" />
         <item itemvalue="Python.settings_editor" />
         <item itemvalue="Python.julia_livegen" />
@@ -186,12 +188,23 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b1525d65-7a0c-4577-b1a7-ea71c3567fe9" name="Changes" comment="" />
+      <changelist id="683f4e71-ffd1-4627-b628-93457bc13f3a" name="Changes" comment="" />
       <created>1691644021696</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1691644021696</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
